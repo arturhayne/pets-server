@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html ng-app="app">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Starter Pack</title>
+
+    <link rel="shortcut icon" ng-href="{{ ::global.imagePath + '/favicon.ico' }}" type="image/x-icon">
+    <link rel="icon" ng-href="{{ ::global.imagePath + '/favicon.ico' }}" type="image/x-icon">
+
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <!--
+       Todos os inject são inseridos automaticamente através da tarefa do gulp.
+       Quando executado a tarefa do gulp pra produção a tarefa substituirá
+       as referências para os arquivos minificados.
+     -->
+
+    <!-- inject:all:css -->
+    <link rel="stylesheet" href="client/build/application.css?version=85go41h24bomg2f">
+    <!-- end:inject:all:css -->
+
+    <!--
+      Family Font usada no projeto
+    -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <!--
+      Material Icons (Referência: https://design.google.com/icons/ )
+    -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!--[if lte IE 10]>
+      <script type="text/javascript">document.location.href = '/client/app/layout/unsupported-browser.html'</script>
+    <![endif]-->
+  </head>
+
+  <body ng-controller="AppController as appCtrl">
+    <pr-spinner></pr-spinner>
+    <ui-view/>
+
+    <!-- inject:vendors:script  -->
+    <script src="client/build/vendors.js?version=85go41h24bomg2f"></script>
+    <script src="client/build/angular-with-plugins.js?version=85go41h24bomg2f"></script>
+    <!-- end:inject:vendors:script  -->
+
+    <!-- inject:application:script -->
+    <script src="client/build/application.js?version=8og6brwea4j6ybd"></script>
+    <!-- end:inject:application:script  -->
+
+  </body>
+
+</html>

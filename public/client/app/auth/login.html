@@ -1,0 +1,37 @@
+<content-body layout-align="center center">
+  <box box-title="{{ ::global.appName}}" flex=100 flex-gt-xs=100 flex-gt-sm=70 flex-gt-md=60>
+    <div layout-gt-xs="row" layout-xs="column">
+      <div flex-gt-xs=30 layout-align="center center" class="md-text-center">
+        <img ng-src="{{:: global.imagePath + '/governo-do-estado-da-bahia.png' }}" alt="logo" />
+      </div>
+      <div flex layout-align="center center">
+        <form flex ng-submit="loginCtrl.login()">
+          <div layout="row" flex layout-align="center center">
+            <md-input-container flex class="bottom-5">
+              <md-icon md-font-set="material-icons">email</md-icon>
+              <label>{{::'email' | tAttr}}</label>
+              <input type="email" ng-model="loginCtrl.credentials.email">
+            </md-input-container>
+          </div>
+          <div layout="row" flex layout-align="center center">
+            <md-input-container flex class="top-1 bottom-1">
+              <md-icon md-font-set="material-icons">lock</md-icon>
+              <label>{{::'password' | tAttr}}</label>
+              <input type="password" flex=99 ng-model="loginCtrl.credentials.password">
+            </md-input-container>
+          </div>
+          <div layout="row" flex layout-align="center center">
+            <md-button id="btn-loginCtrl-login" flex type="submit" class="md-raised md-primary">
+              {{::'views.actions.in' | translate}}
+            </md-button>
+          </div>
+          <div layout="row" flex layout-align="center center">
+            <md-button class="md-primary" flex ng-click="loginCtrl.openDialogResetPass()">
+              {{::'views.fields.login.resetPassword' | translate}}
+            </md-button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </box>
+</content-body>
