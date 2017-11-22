@@ -88,8 +88,7 @@ class PetsController extends CrudController
 
         $pet->owner_id = Auth::id();
         $pet->save();
-
-        $pet->owner = $pet->owner()->select('id', 'name')->get();
+        $pet->owner = null;
 
         return $pet;
     }
