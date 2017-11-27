@@ -1,3 +1,9 @@
+## Sobre ##
+
+Projeto utilizando nos treinamentos de front-end. 
+Este projeto contém APIs documentadas no arquivo api.pdf.
+O contexto do projeto é Pets (Animais de estimação).
+
 ## Instalação Tradicional ##
 
 - Seguir a instalação dos pré requisitos via [README Instalação Pré Requisitos](docs/readme-install-prerequisites.md).
@@ -18,8 +24,8 @@ composer global require "laravel/installer"
 composer global require phpunit/phpunit
 
 # Dando permissão nas pastas do laravel
-chmod 777 -R storage
-chmod 777 -R bootstrap/cache
+chmod -R 777 storage
+chmod -R 777 bootstrap/cache
 
 # Instalando as dependencias
 COMPOSER_PROCESS_TIMEOUT=2000 composer install
