@@ -19,6 +19,10 @@ Route::options('{all}', function () {
     return \Response::json('{"method":"OPTIONS"}', 200, \Prodeb::getCORSHeaders());
 })->where('all', '.*');
 
+Route::get('/', function () {
+    return resposen()->json(['status' => 'API_ONLINE']);
+});
+
 Route::group(['prefix' => 'v1', 'middleware' => 'cors'], function () {
     //public area
     Route::post('authenticate', 'AuthenticateController@authenticate');
@@ -45,19 +49,9 @@ Route::group(['prefix' => 'v1', 'middleware' => 'cors'], function () {
 
         Route::get('authenticate/user', 'AuthenticateController@getAuthenticatedUser');
 
-        Route::resource('projects', 'Samples\ProjectsController');
-        Route::resource('roles', 'RolesController', ['only' => ['index']]);
-
-        Route::put('tasks/toggleDone', 'Samples\TasksController@toggleDone');
-        Route::resource('tasks', 'Samples\TasksController');
-
-        Route::resource(
-            'mails',
-            'MailsController',
-            ['only' => ['store']]
-        );
-
         Route::put('profile', 'UsersController@updateProfile');
+
+        Route::resource('roles', 'RolesController', ['only' => ['index']]);
 
         //admin area
         Route::group(['middleware' => ['acl.role:admin']], function () {

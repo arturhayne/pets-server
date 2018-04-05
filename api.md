@@ -1,4 +1,4 @@
-# Back-end para o Curso de Angular #
+# API Para curso de front-end #
 _____
 
 # Seviços
@@ -33,7 +33,7 @@ _____
 #### Request
 
 ```json 
-{ email: "tutorial@prodeb.ba.gov.br", password: "secret" }
+{ email: "admin-base@prodeb.com", password: "Prodeb01" }
 ```
 
 #### Response
@@ -103,7 +103,7 @@ _____
 ```
 
 _____
-## GET api/v1/pet/abandoned
+## GET api/v1/pets/abandoned
 
 #### Request
 
@@ -138,7 +138,7 @@ _____
 ```
 
 _____
-## PUT api/v1/pet/adopt/id
+## PUT api/v1/pets/adopt/id
 
 #### Request
 
@@ -154,7 +154,7 @@ _____
 ```
 
 _____
-## PUT api/v1/pet/abandon/id
+## PUT api/v1/pets/abandon/id
 
 #### Request
 
